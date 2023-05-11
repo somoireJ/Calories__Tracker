@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container-fluid p-0" style="background-image: url('https://source.unsplash.com/1600x900/?wellness'); background-size: cover; background-position: center; height: 100vh;">
+    <div class="container py-5">
+      <h1 class="text-center mb-4" style="color: rgb(1, 1, 1);">Food List</h1>
+      <div class="table-responsive bg-white rounded shadow-lg p-3">
+        <table class="table">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Calories</th>
+              <th>Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for food in foods %}
+              <tr>
+                <td>{{ food.name }}</td>
+                <td>{{ food.calories }}</td>
+                <td>
+                  <a href="{% url 'myApp:edit_food' food.id %}" class="btn btn-sm btn-primary me-2">Edit</a>
+                  <a href="{% url 'myApp:delete_food' food.id %}" class="btn btn-sm btn-danger">Delete</a>
+                </td>
+              </tr>
+            {% empty %}
+              <tr>
+                <td colspan="3">No foods yet.</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+        <a href="{% url 'myApp:add_food' %}" class="btn btn-primary">Add Food</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

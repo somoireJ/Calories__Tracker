@@ -1,0 +1,130 @@
+/* Import Playfair Display font from Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap');
+body {
+  background-color: #4288a1;
+  font-family: 'Playfair Display', serif;
+  font-weight: bold;
+  }
+  
+  h1 {
+  color: #2c3e50;
+  font-weight: 700;
+  font-size: 3rem;
+  }
+  
+  .navbar {
+  background-color: #287eb8;
+  font-weight: 700;
+  }
+  
+  .navbar-brand,
+  .navbar-nav li a {
+  color: rgb(152, 150, 206);
+  font-size: 1.2rem;
+  }
+  
+  /* Add some padding and margins to elements */
+  .container {
+  padding-top: 50px;
+  margin-bottom: 50px;
+  }
+  
+  .btn {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  padding: 10px 20px;
+  }
+  
+  .card {
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 15px 5px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Add some borders and shadows to elements */
+  .card-header {
+  background-color: #3498db;
+  color: rgb(112, 98, 98);
+  border-radius: 10px 10px 0 0;
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 20px;
+  }
+  
+  .card-body {
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  }
+  
+  .form-control:focus {
+  border-color: #e67e22;
+  box-shadow: 0 0 0 0.2rem rgba(173, 89, 15, 0.25);
+  }
+  
+  /* Add some styling to form elements */
+  form label {
+  font-weight: 700;
+  font-size: 1.2rem;
+  }
+  
+  form .form-group {
+  margin-bottom: 50px;
+  }
+  
+  form .form-control {
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 20px;
+  }
+  
+  /* Add some styles to the table */
+  table {
+  width: 100%;
+  border-collapse: collapse;
+  }
+  
+  th,
+  td {
+  text-align: left;
+  padding: 15px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  }
+  
+  th {
+  background-color: #e74c3c;
+  color: white;
+  }
+  
+  tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+  }
+  
+  /* Add some custom styles to Bootstrap classes */
+  .btn-primary,
+  .btn-success {
+  border-radius: 10px;
+  font-size: 1.2rem;
+  font-weight: 700;
+  }
+  
+  .btn-primary:hover,
+  .btn-success:hover {
+  transform: scale(1.1);
+  }
+  
+  .btn-primary:active,
+  .btn-success:active {
+  transform: scale(1);
+  }
+  
+  @media (max-width: 575.98px) {
+  .container {
+  padding-left: 10px;
+  padding-right: 10px;
+  }
+  }

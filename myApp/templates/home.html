@@ -1,0 +1,16 @@
+
+
+{% extends "base.html" %}
+
+{% block content %}
+<div class="container-fluid" style="background-image: url('https://source.unsplash.com/1600x900/?wellness'); background-size: cover; padding: 30px; border-radius: 10px; height: 100vh;">
+  <div style="background-color: rgba(255, 255, 255, 0.8); padding: 50px; border-radius: 10px;">
+    <h1 style="font-size: 4rem; margin-bottom: 20px; color: #444;">Calorie Tracker</h1>
+    <p style="font-size: 1.2rem; margin-bottom: 30px; color: #444;">Welcome to the Calorie Tracker website. Here, you can keep track of the number of calories you consume each day.</p>
+    <div style="display: flex; justify-content: space-around;">
+      <a href="{% url 'myApp:food' %}" class="btn btn-primary" style="background-color: #007bff; border-color: #007bff; border-radius: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.25); padding: 10px 30px; font-size: 1.2rem;">View Food List</a>
+      <a href="{% url 'myApp:add_food' %}" class="btn btn-success" style="background-color: #28a745; border-color: #28a745; border-radius: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.25); padding: 10px 30px; font-size: 1.2rem;">Add Food</a>
+    </div>
+  </div>
+</div>
+{% endblock %}

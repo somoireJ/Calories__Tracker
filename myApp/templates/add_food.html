@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <h1 style="font-size: 3rem; margin-bottom: 30px;">Add Food Item</h1>
+  <hr style="margin-bottom: 30px;">
+  <form method="post">
+    {% csrf_token %}
+    <div class="form-group">
+      <label for="name" style="font-size: 1.5rem;">Food Name</label>
+      <input type="text" class="form-control" id="name" name="name" required style="font-size: 1.2rem;">
+    </div>
+    <div class="form-group">
+      <label for="calories" style="font-size: 1.5rem;">Calories</label>
+      <input type="number" class="form-control" id="calories" name="calories" required style="font-size: 1.2rem;">
+    </div>
+    <button type="submit" class="btn btn-primary" style="background-color: #007bff; border-color: #007bff; border-radius: 20px; box-shadow: 2px 2px 5px rgba(0,0,0,0.25); padding: 10px 30px; font-size: 1.2rem; margin-top: 20px;">Add Food Item</button>
+  </form>
+{% endblock %}

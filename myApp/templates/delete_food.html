@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <div class="container">
+    <h1>Delete Food Item</h1>
+    <p>Are you sure you want to delete "{{ food.name }}" from the list of food items?</p>
+    <form method="POST">
+      {% csrf_token %}
+      <button type="submit" class="btn btn-danger">Delete</button>
+      <a href="{% url 'myApp:food' %}" class="btn btn-secondary">Cancel</a>
+      <!-- <a href="{% url 'myApp:delete_food' food.id %}" class="btn btn-danger"><i class="bi bi-trash"></i> Delete</a> -->
+    </form>
+  </div>
+{% endblock %}
