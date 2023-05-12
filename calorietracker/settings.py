@@ -15,7 +15,13 @@ from pathlib import Path
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
 
+"""
+import environ
 
+env = environ.Env()
+environ.Env.read_env()
+
+"""
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -70,10 +76,9 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'calorietracker.wsgi.application'
 
-
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
-
+"""
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
@@ -85,6 +90,14 @@ DATABASES = {
     }
 }
 
+"""
+# # RENDER DATABASE
+import dj_database_url
+
+DATABASES = {
+    'default': dj_database_url.parse('postgres://productiondatabase_0unm_user:YtQUADdtmCnhxPNSFPRQmxOj3OlgKue8@dpg-chegb8bhp8ubgo5rehc0-a.oregon-postgres.render.com/productiondatabase_0unm')
+    
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.2/ref/settings/#auth-password-validators
@@ -126,3 +139,7 @@ STATIC_URL = 'static/'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap4"
+
+CRISPY_TEMPLATE_PACK = "bootstrap4"
